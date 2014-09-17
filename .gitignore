@@ -1,28 +1,20 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+bool ExOh(char *str)
+{
+    int o=0,x=0;// 'o' i 'x' sa broq4i za o-tata i x-ovete
+    do
+    {
+        if(*str=='x')
+            x++;
+        else
+            o++;
 
-# Precompiled Headers
-*.gch
-*.pch
+        str++;
+    }
+    while(*str!='\0');
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    if(x==o)
+        return true;
+    else
+        return false;
 
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+}
